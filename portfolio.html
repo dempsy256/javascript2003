@@ -13,18 +13,21 @@
     <script src="portfolio.js"></script>
 
     <nav class="navbar">
+        <a href="#" class="logo">Portfolio.</a>
     <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Featured projects</a></li>
-        <li><a href="#">About me</a></li>
-        <li><a href="#">Contact me</a></li>
-        <li><button class="but">View Resume</button></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#contact">Contact me</a></li>
+        <li><button class="button">View Resume <i class="fa-solid fa-briefcase"></i></button></li>
     </ul>
     </nav>
 
-    <div class="intro">
-        <h3>Hi, I am <class class="name">Namirembe Redemptor</class></h3>
-        <p>A seasoned <class class="name">Frontend Developer</class> transforming ideas into stunning<br>digital experiences. Let's create something amazing!</p>
+    <div class="intro" id="home">
+        <h3>Hi, I am <class class="text">Namirembe Redemptor</class></h3>
+        <p>A seasoned <class class="name" style="--i:2;" data-text="Frontend Developer"><span>Frontend Developer</span></class>
+        <class class="name" style="--i:1;" data-text="Designer"><span>Designer</span></class>
+         transforming ideas into stunning<br>digital experiences. Let's create something amazing!</p>
 
         <div class="socialmedia">
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -35,10 +38,10 @@
         </div>
 
         <h3>SERVICES</h3>
-        <p>What <class class="name">I do</class></p>
+        <p>What <class class="text">I do</class></p>
     </div>
 
-    <div class="do">
+    <div class="do" id="services">
          <div class="contain" style="--color: #ffd23f;">
             <i class="fa-solid fa-code"></i>
             <h4 class="title">Web Development</h4>
@@ -56,10 +59,123 @@
             <h4 class="title">Content Writing</h4>
             <p class="describe">Weaving impactful narratives and<br>delivering engaging content that resonates<br>with readers.Skillfully combining creativity<br>with research to create compelling pieces</p>
          </div>
+         <hr>
     </div>
 
-    <div class="project">
-        <h3>Featured <class class="name">Projects</class></h3>
+   
+    <div class="me" id="about">
+        <div class="head">
+        <h2>MY BIO</h2>
+        <h3>About <class class="text">me</class></h3>
+        </div>
+            <div class="photo">
+                <img class="content" src="/me.jpg">
+                <p>I am a passionate web developer with a unique blend of creativity and technical expertise.
+                    <br>I am also pursuing a degree in electrical engineering, where i have honed my problem-solving skills and attention to detail.
+                    <br>With a solid foundation in both design and development, I create websites that are not only visually appealing
+                    <br>but also optimized for performance and accessibility.
+                    <br>My goal is to deliver high-quality web solutions that exceed your expectations and help your business thrive online.
+                    <br>Whether it is a simple brochure website or a complex web application, I'm here to help. Let's build something amazing together!
+                     <br><button class="button">View Resume <i class="fa-solid fa-briefcase"></i></button> </p>
+            </div>
+          
+
+    </div>
+
+    <div class="skill">
+        <div class="head">
+        <h3>SKILLS</h3>
+        <p>Technical <class class="text">skills</class></p>
+        </div>
+         <div class="pi">
+        <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-xl space-y-8">
+        <h1 class="text-3xl font-bold text-center text-gray-800">My Skills</h1>
+        
+        <!-- HTML Progress Bar -->
+        <div class="space-y-2">
+            <div class="flex items-center justify-between">
+                <span class="text-lg font-medium text-gray-700">HTML</span>
+                <span id="html-percentage" class="text-sm font-semibold text-gray-500">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div id="html-bar" class="progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- CSS Progress Bar -->
+        <div class="space-y-2">
+            <div class="flex items-center justify-between">
+                <span class="text-lg font-medium text-gray-700">CSS</span>
+                <span id="css-percentage" class="text-sm font-semibold text-gray-500">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div id="css-bar" class="progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- JavaScript Progress Bar -->
+        <div class="space-y-2">
+            <div class="flex items-center justify-between">
+                <span class="text-lg font-medium text-gray-700">JavaScript</span>
+                <span id="js-percentage" class="text-sm font-semibold text-gray-500">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div id="js-bar" class="progress-bar"></div>
+            </div>
+        </div>
+
+         <!-- Figma Progress Bar -->
+        <div class="space-y-2">
+            <div class="flex items-center justify-between">
+                <span class="text-lg font-medium text-gray-700">Figma</span>
+                <span id="figma-percentage" class="text-sm font-semibold text-gray-500">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div id="figma-bar" class="progress-bar"></div>
+            </div>
+        </div>
+        
+    </div>
+         </div>
+    </div>
+
+    <div class="cont" id="contact">
+        <div class="head">
+        <h3>GET IN TOUCH</h3>
+        <p>CONTACT <class class="text">ME </class></p>
+        <p>I am currently open to full-time, contract or part-time opportunities in<br> Front End Development.</p>
+        </div>
+        
+        <div class="conts">
+        <div class="contacts">
+            <p>Have an Awesome project idea?</p>
+            <p><class class="text">Let's Discuss</class></p>
+            <p><i class="fa-solid fa-phone"></i> <class class="text">+256 759027391</class></p>
+            <p><i class="fa-solid fa-envelope"></i> <class class="text">namiremberedemptor@gmail.com</class></p>
+            <p><i class="fa-solid fa-compass"></i> <class class="text"><a href="https://www.bing.com/maps?q=kampala+city+uganda&FORM=HDRSC6&cp=0.313602%7E32.581115&lvl=16.0">Kampala, Uganda</class></a></p>
+        </div>
+        
+        
+       <div class="container">
+        <!-- The HTML provided by the user, with corrected 'for' and 'id' attributes -->
+        <div class="message">
+            <input type="text" id="name" autocomplete="off" placeholder=" " class="form_input"/>
+            <label for="name">Full Name</label>
+        </div>
+
+        <div class="message">
+            <input type="text" id="email" autocomplete="off" placeholder=" " class="form_input"/>
+            <label for="email">Email</label>
+        </div>
+
+        <div class="message">
+            <textarea id="message" autocomplete="off" placeholder=" " class="form_textarea"></textarea>
+            <label for="message">Message</label>
+        </div>
+
+        <button class="submit-button">Send Message</button>
+    </div>
+        </div>
     </div>
     
 </body>

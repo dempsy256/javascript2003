@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f0f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .game-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #5a67d8;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        .score-board {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 25px;
+            font-size: 1.2em;
+        }
+
+        .score {
+            padding: 10px 20px;
+            background-color: #e2e8f0;
+            border-radius: 10px;
+            min-width: 100px;
+        }
+
+        .choices {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .choice-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .choice-btn:hover {
+            background-color: #5a67d8;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #result {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        #computer-choice {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #718096;
+        }
+
+        .choice-display {
+            font-size: 3em;
+            animation: none;
+            display: inline-block;
+        }
+
+        /* 2D Hand Animations */
+        @keyframes rock-shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+
+        @keyframes paper-wave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        @keyframes scissors-cut {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(0.9); }
+        }
+
+        /* Animation classes for the hand gestures */
+        .animate-rock {
+            animation: rock-shake 0.5s ease-in-out infinite;
+        }
+        .animate-paper {
+            animation: paper-wave 0.5s ease-in-out infinite;
+        }
+        .animate-scissors {
+            animation: scissors-cut 0.5s ease-in-out infinite;
+        }
+
+        .play-again {
+            background-color: #48bb78;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.2s;
+            display: none; /* Initially hidden */
+        }
+
+        .play-again:hover {
+            background-color: #38a169;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 600px) {
+            .game-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .score-board {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .choices {
+                gap: 10px;
+            }
+
+            .choice-btn {
+                padding: 10px 20px;
+                font-size: 1.2em;
+            }
+        }
